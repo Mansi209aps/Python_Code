@@ -1,0 +1,19 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        res = []
+        count  = 0
+        INT_MAX = float('inf')
+
+        for i in range(1, len(nums)):
+            if nums[i] == nums[i-1]:
+                nums[i-1] = INT_MAX
+        
+        nums.sort()
+
+        for i in range(len(nums)):
+            if nums[i] != INT_MAX:
+                count = count + 1
+        print(count)
+
+        return count
+        
