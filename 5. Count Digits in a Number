@@ -7,3 +7,6 @@ class Solution:
             n = int(n/10)
             count = count+1
         return count
+
+
+cnt = int(math.log10(n) + 1)
