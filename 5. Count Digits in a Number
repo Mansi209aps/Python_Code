@@ -24,3 +24,21 @@ class Solution:
 		    reverse = reverse*10 + digit
 		    
 		return reverse
+
+
+## Palindrome Number
+
+class Solution:
+    def isPalindrome(self, n):
+		number = abs(n)
+		n = abs(n)
+		reverse = 0
+		digit = 0
+		while n>0:
+		    digit = n%10
+		    n = int(n/10)
+		    reverse = reverse*10+digit
+		if reverse == number:
+		    return True
+		return False
+		
