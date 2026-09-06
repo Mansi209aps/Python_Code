@@ -10,3 +10,17 @@ class Solution:
 
 
 cnt = int(math.log10(n) + 1)
+
+
+## Reverse Digits
+
+class Solution:
+	def reverseDigits(self, n):
+	    digit = 0
+	    reverse = 0
+		while n>0:
+		    digit = n%10
+		    n = int(n/10)
+		    reverse = reverse*10 + digit
+		    
+		return reverse
