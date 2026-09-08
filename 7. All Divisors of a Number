@@ -1,0 +1,20 @@
+class Solution:
+    def getDivisors(self, n):
+        res = []
+        limit = int (n ** 0.5)
+        for i in range(1,limit+1):
+            rem = n%i
+            div = int(n/i)
+            
+            if rem == 0:
+                res.append(i)
+                
+                if i != div:
+                    res.append(div)
+                
+        res = sorted(res)
+        return res
+
+
+https://takeuforward.org/data-structure/print-all-divisors-of-a-given-number
+        
