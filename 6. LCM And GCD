@@ -1,0 +1,25 @@
+class Solution:
+    def lcmAndGcd(self, a : int, b : int) -> List[int]:
+        res = []
+
+        if a > b:
+            n1 = a
+            n2 = b
+        else:
+            n1 = b
+            n2 = a
+
+        while n2 > 0:
+            temp = n2
+            n2 = n1 % n2
+            n1 = temp
+
+        gcd = n1
+        lcm = int ((a * b) / gcd)
+
+        res.append(lcm)
+        res.append(gcd)
+        return res
+            
+
+        LCM = (a × b) / GCD
