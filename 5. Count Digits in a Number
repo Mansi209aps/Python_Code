@@ -41,4 +41,21 @@ class Solution:
 		if reverse == number:
 		    return True
 		return False
-		
+
+
+## Armstrong Numbers
+
+class Solution:
+    def armstrongNumber (self, n):
+        num = n
+        digit = 0
+        sum = 0
+        while n>0:
+            digit  = n%10
+            n = int(n/10)
+            sum = sum + (digit ** 3)
+  
+        if sum == num:
+            return True
+        return False
+        
